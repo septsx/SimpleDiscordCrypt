@@ -5,9 +5,9 @@
 // @description  I hope people won't start calling this SDC ^_^
 // @author       An0
 // @license      LGPLv3 - https://www.gnu.org/licenses/lgpl-3.0.txt
-// @downloadURL  https://gitlab.com/An0/SimpleDiscordCrypt/raw/master/SimpleDiscordCrypt.user.js
-// @updateURL    https://gitlab.com/An0/SimpleDiscordCrypt/raw/master/SimpleDiscordCrypt.meta.js
-// @icon         https://gitlab.com/An0/SimpleDiscordCrypt/raw/master/logo.png
+// @downloadURL  https://github.com/septsx/SimpleDiscordCrypt/raw/main/SimpleDiscordCrypt.user.js
+// @updateURL    https://github.com/septsx/SimpleDiscordCrypt/raw/main/SimpleDiscordCrypt.meta.js
+// @icon         https://github.com/septsx/SimpleDiscordCrypt/raw/main/logo.png
 // @match        https://*.discord.com/channels/*
 // @match        https://*.discord.com/activity
 // @match        https://*.discord.com/login*
@@ -27,7 +27,7 @@
 (function () {
   'use strict';
 
-  const BlacklistUrl = 'https://gitlab.com/An0/SimpleDiscordCrypt/raw/master/blacklist.txt';
+  const BlacklistUrl = 'https://github.com/septsx/SimpleDiscordCrypt/raw/main/blacklist.txt';
 
   const SavedLocalStorage = typeof localStorage !== 'undefined' ? localStorage : null;
   const FixedCsp = typeof CspDisarmed !== 'undefined' ? CspDisarmed : false;
@@ -4051,7 +4051,7 @@ ${HeaderBarSelector}, ${HeaderBarChildrenSelector} { overflow: visible !importan
       Cache.channelBlacklist === 2 ||
       (channel.type === 0 && !Utils.Can(EMBED_LINKS_CHECK, Discord.getCurrentUser(), channel))
     ) {
-      message.content = payload + ' `𝘚𝘪𝘮𝘱𝘭𝘦𝘋𝘪𝘴𝘤𝘰𝘳𝘥𝘊𝘳𝘺𝘱𝘵`';
+      message.content = payload + ' ` `';
     } else {
       message.content = '';
       message.embed = {
