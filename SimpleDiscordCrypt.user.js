@@ -4051,7 +4051,7 @@ ${HeaderBarSelector}, ${HeaderBarChildrenSelector} { overflow: visible !importan
       Cache.channelBlacklist === 2 ||
       (channel.type === 0 && !Utils.Can(EMBED_LINKS_CHECK, Discord.getCurrentUser(), channel))
     ) {
-      message.content = payload + ' ` `';
+      message.content = payload + ' `$`';
     } else {
       message.content = '';
       message.embed = {
